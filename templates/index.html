@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Professional cleaning services in Letchworth, Hitchin, Royston and across Hertfordshire. Reliable, local, affordable. Get a free quote today.">
+  <title>Fox Cleaning — Hertfordshire's Local Cleaning Service</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- ===================== NAV ===================== -->
+<nav id="nav">
+  <a href="#" class="nav-logo">
+    <!-- DROP YOUR LOGO FILE AT static/logo.png -->
+    <img src="{{ url_for('static', filename='logo.png') }}" alt="Fox Cleaning logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline'">
+    <span class="logo-text-fallback" style="display:none;">Fox Cleaning</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#services">Services</a></li>
+    <li><a href="#areas">Areas</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#contact" class="nav-cta">Get a quote</a></li>
+  </ul>
+  <button class="burger" id="burger" aria-label="Open menu">&#9776;</button>
+</nav>
+
+<!-- Mobile menu -->
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-close" id="mobileClose">&#10005;</button>
+  <a href="#services" class="mobile-link">Services</a>
+  <a href="#areas" class="mobile-link">Areas</a>
+  <a href="#about" class="mobile-link">About</a>
+  <a href="#contact" class="mobile-link mobile-cta">Get a free quote</a>
+</div>
+
+
+<!-- ===================== HERO ===================== -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-badge">Serving Hertfordshire since day one</div>
+    <h1>Cleaning that<br><span class="accent">actually shows up.</span></h1>
+    <p class="hero-sub">
+      Reliable, local cleaning for homes and small businesses in Letchworth, Hitchin, Royston and surrounding towns. No call centres. Direct communication. Honest pricing.
+    </p>
+    <div class="hero-actions">
+      <a href="#contact" class="btn btn-primary">Get a free quote</a>
+      <a href="tel:+441234000000" class="btn btn-ghost">&#9742; Call us now</a>
+    </div>
+    <div class="hero-trust">
+      <span>&#10003; Insured</span>
+      <span>&#10003; Local &amp; reliable</span>
+      <span>&#10003; Flexible scheduling</span>
+    </div>
+  </div>
+</section>
+
+
+<!-- ===================== SERVICES ===================== -->
+<section id="services" class="section">
+  <div class="container">
+    <div class="section-label">What we do</div>
+    <h2>Services</h2>
+    <p class="section-sub">Straightforward cleaning for homes and small commercial premises across Hertfordshire.</p>
+
+    <div class="services-grid">
+
+      <div class="service-card">
+        <div class="service-icon">&#127968;</div>
+        <h3>Regular Domestic Cleaning</h3>
+        <p>Weekly or fortnightly home cleans. Kitchens, bathrooms, living areas and bedrooms. Consistent cleaner, consistent standard.</p>
+        <ul>
+          <li>Weekly or fortnightly visits</li>
+          <li>Flexible timing around you</li>
+          <li>Same cleaner each visit</li>
+        </ul>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">&#10024;</div>
+        <h3>Deep Cleaning</h3>
+        <p>A thorough top-to-bottom clean for when a property needs more than the regular. Ideal before moving in, after builders, or for a seasonal reset.</p>
+        <ul>
+          <li>Inside cupboards and appliances</li>
+          <li>Limescale, grease and grime removal</li>
+          <li>One-off or periodic</li>
+        </ul>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">&#128273;</div>
+        <h3>End of Tenancy</h3>
+        <p>Move-out cleans built around getting your deposit back. Thorough, documented and done to letting agent standards.</p>
+        <ul>
+          <li>Full property clean</li>
+          <li>Appliances inside and out</li>
+          <li>Available at short notice</li>
+        </ul>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">&#127970;</div>
+        <h3>Small Commercial &amp; Office</h3>
+        <p>Regular cleaning for small offices, studios and commercial premises. Early morning or out-of-hours available.</p>
+        <ul>
+          <li>Offices and co-working spaces</li>
+          <li>Retail and studios</li>
+          <li>Flexible scheduling</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ===================== WHY US ===================== -->
+<section id="about" class="section section-tinted">
+  <div class="container">
+    <div class="section-label">Why Fox Cleaning</div>
+    <h2>What sets us apart</h2>
+    <p class="section-sub">We're a local business. You deal with us directly — not a call centre or franchise operation.</p>
+
+    <div class="reasons-grid">
+      <div class="reason">
+        <div class="reason-icon">&#128205;</div>
+        <h4>Local to Hertfordshire</h4>
+        <p>Based near Letchworth. We know the area and we're not going anywhere.</p>
+      </div>
+      <div class="reason">
+        <div class="reason-icon">&#128222;</div>
+        <h4>Direct communication</h4>
+        <p>You speak to the person doing the work. No holding music. No ticket system.</p>
+      </div>
+      <div class="reason">
+        <div class="reason-icon">&#128197;</div>
+        <h4>Flexible bookings</h4>
+        <p>We work around your schedule, not the other way around.</p>
+      </div>
+      <div class="reason">
+        <div class="reason-icon">&#9989;</div>
+        <h4>Consistent standards</h4>
+        <p>Clear checklists and quality control on every visit — not just the first one.</p>
+      </div>
+      <div class="reason">
+        <div class="reason-icon">&#128203;</div>
+        <h4>Transparent pricing</h4>
+        <p>You know what you're paying before we start. No surprises on the invoice.</p>
+      </div>
+      <div class="reason">
+        <div class="reason-icon">&#128736;</div>
+        <h4>Hands-on approach</h4>
+        <p>Owner-operated. The person running the business is on the job.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ===================== AREAS ===================== -->
+<section id="areas" class="section">
+  <div class="container">
+    <div class="section-label">Where we work</div>
+    <h2>Areas covered</h2>
+    <p class="section-sub">We cover Letchworth, Hitchin, Royston and the surrounding Hertfordshire towns. Not sure if we cover you? Just ask.</p>
+
+    <div class="areas-grid">
+      <div class="area-tag">Letchworth Garden City</div>
+      <div class="area-tag">Hitchin</div>
+      <div class="area-tag">Royston</div>
+      <div class="area-tag">Baldock</div>
+      <div class="area-tag">Stevenage</div>
+      <div class="area-tag">Knebworth</div>
+      <div class="area-tag">Welwyn Garden City</div>
+      <div class="area-tag">Hertford</div>
+      <div class="area-tag">Nearby villages</div>
+    </div>
+
+    <p class="areas-note">Not on the list? Drop us a message — we cover more than we list here.</p>
+  </div>
+</section>
+
+
+<!-- ===================== TRUST ===================== -->
+<section class="section trust-section">
+  <div class="container">
+    <div class="trust-strip">
+      <div class="trust-item">
+        <strong>&#128203; Insured</strong>
+        <span>Public liability cover in place</span>
+      </div>
+      <div class="trust-divider"></div>
+      <div class="trust-item">
+        <strong>&#9989; No contracts</strong>
+        <span>Start, pause or stop any time</span>
+      </div>
+      <div class="trust-divider"></div>
+      <div class="trust-item">
+        <strong>&#128205; Local</strong>
+        <span>Hertfordshire-based, not a franchise</span>
+      </div>
+      <div class="trust-divider"></div>
+      <div class="trust-item">
+        <strong>&#128222; Direct contact</strong>
+        <span>Speak to us, not an operator</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ===================== CONTACT / QUOTE FORM ===================== -->
+<section id="contact" class="section section-dark">
+  <div class="container">
+    <div class="section-label light">Get in touch</div>
+    <h2 class="light">Get a free quote</h2>
+    <p class="section-sub light">Fill in the form and we'll get back to you within a few hours. No obligation.</p>
+
+    <!-- Flash messages -->
+    {% with messages = get_flashed_messages(with_categories=true) %}
+      {% if messages %}
+        {% for category, message in messages %}
+          <div class="flash flash-{{ category }}">{{ message }}</div>
+        {% endfor %}
+      {% endif %}
+    {% endwith %}
+
+    <div class="contact-layout">
+
+      <form class="quote-form" action="/enquiry" method="POST">
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name">Your name <span class="required">*</span></label>
+            <input type="text" id="name" name="name" placeholder="Jane Smith" required>
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone number <span class="required">*</span></label>
+            <input type="tel" id="phone" name="phone" placeholder="07700 900000" required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email address <span class="optional">(optional)</span></label>
+          <input type="email" id="email" name="email" placeholder="jane@example.com">
+        </div>
+
+        <div class="form-group">
+          <label for="clean_type">Type of clean <span class="required">*</span></label>
+          <select id="clean_type" name="clean_type" required>
+            <option value="" disabled selected>Select a service…</option>
+            <option value="Regular domestic">Regular domestic cleaning</option>
+            <option value="Deep clean">Deep cleaning</option>
+            <option value="End of tenancy">End of tenancy</option>
+            <option value="Commercial / office">Commercial / office cleaning</option>
+            <option value="Other">Other — I'll explain below</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="details">Property / business details</label>
+          <input type="text" id="details" name="details" placeholder="e.g. 3-bed house in Hitchin, or small office in Letchworth">
+        </div>
+
+        <div class="form-group">
+          <label for="preferred_date">Preferred start date</label>
+          <input type="date" id="preferred_date" name="preferred_date">
+        </div>
+
+        <div class="form-group">
+          <label for="message">Anything else we should know?</label>
+          <textarea id="message" name="message" rows="4" placeholder="Access notes, specific requirements, questions…"></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-full">Send enquiry</button>
+        <p class="form-note">We'll reply by phone or email, usually the same day.</p>
+
+      </form>
+
+      <div class="contact-sidebar">
+        <div class="contact-card">
+          <h4>Prefer to call?</h4>
+          <a href="tel:+441234000000" class="contact-link">&#9742; 01234 000 000</a>
+          <p class="contact-note">Replace this number before going live.</p>
+        </div>
+        <div class="contact-card">
+          <h4>WhatsApp</h4>
+          <a href="https://wa.me/441234000000" class="contact-link" target="_blank">&#128172; Message us on WhatsApp</a>
+        </div>
+        <div class="contact-card">
+          <h4>Email</h4>
+          <a href="mailto:hello@foxcleaning.co.uk" class="contact-link">&#9993; hello@foxcleaning.co.uk</a>
+        </div>
+        <div class="contact-card contact-promise">
+          <p>&#10003; We respond within a few hours<br>
+             &#10003; Free quote, no obligation<br>
+             &#10003; No pushy follow-ups</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ===================== FOOTER ===================== -->
+<footer>
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <img src="{{ url_for('static', filename='logo.png') }}" alt="Fox Cleaning" class="footer-logo" onerror="this.style.display='none'">
+      <span>Fox Cleaning</span>
+    </div>
+    <div class="footer-cols">
+      <div>
+        <h5>Contact</h5>
+        <a href="tel:+441234000000">01234 000 000</a>
+        <a href="mailto:hello@foxcleaning.co.uk">hello@foxcleaning.co.uk</a>
+      </div>
+      <div>
+        <h5>Services</h5>
+        <a href="#services">Regular domestic</a>
+        <a href="#services">Deep cleaning</a>
+        <a href="#services">End of tenancy</a>
+        <a href="#services">Commercial</a>
+      </div>
+      <div>
+        <h5>Areas</h5>
+        <span>Letchworth · Hitchin</span>
+        <span>Royston · Baldock</span>
+        <span>Stevenage &amp; nearby</span>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2026 Fox Cleaning Services. Hertfordshire, UK.</p>
+  </div>
+</footer>
+
+
+<script>
+  // Nav scroll shadow
+  const nav = document.getElementById("nav");
+  window.addEventListener("scroll", () => {
+    nav.classList.toggle("nav-scrolled", window.scrollY > 20);
+  });
+
+  // Mobile menu
+  const burger = document.getElementById("burger");
+  const mobileMenu = document.getElementById("mobileMenu");
+  const mobileClose = document.getElementById("mobileClose");
+
+  burger.addEventListener("click", () => mobileMenu.classList.add("open"));
+  mobileClose.addEventListener("click", () => mobileMenu.classList.remove("open"));
+  mobileMenu.querySelectorAll("a").forEach(a => {
+    a.addEventListener("click", () => mobileMenu.classList.remove("open"));
+  });
+
+  // Scroll-reveal
+  const revealEls = document.querySelectorAll(".service-card, .reason, .area-tag, .trust-item");
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("revealed");
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+  revealEls.forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
