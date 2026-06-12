@@ -1,18 +1,18 @@
 /* =====================================================
    FOX CLEANING — style.css
-   Palette: Deep forest green + warm off-white + amber accent
+   Palette: Navy blue + crisp white + sky accent
    Type: Sora (headings) + Inter (body)
    ===================================================== */
 
 /* ---------- TOKENS ---------- */
 :root {
-  --green:        #1a5c3a;
-  --green-mid:    #2d7a52;
-  --green-light:  #e8f4ee;
-  --amber:        #e8a020;
-  --dark:         #111b15;
-  --mid:          #4a5e52;
-  --light:        #f5f7f5;
+  --green:        #1a3f6f;
+  --green-mid:    #1f6fff;
+  --green-light:  #eaf1ff;
+  --amber:        #5bb8f5;
+  --dark:         #0f172a;
+  --mid:          #4a5568;
+  --light:        #f7f9ff;
   --white:        #ffffff;
 
   --font-display: "Sora", system-ui, sans-serif;
@@ -290,7 +290,7 @@ h2.light {
 /* ---------- HERO ---------- */
 .hero {
   min-height: 100vh;
-  background: linear-gradient(150deg, var(--green) 0%, var(--green-mid) 60%, #3a9466 100%);
+  background: linear-gradient(135deg, var(--green) 0%, var(--green-mid) 60%, #4f8cff 100%);
   display: flex;
   align-items: center;
   padding: 120px 24px 80px;
@@ -364,7 +364,7 @@ h2.light {
 
 .service-card {
   background: var(--white);
-  border: 1px solid #e2ebe5;
+  border: 1px solid #d6e4ff;
   border-radius: var(--radius-lg);
   padding: 28px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -467,7 +467,7 @@ h2.light {
 
 .area-tag {
   background: var(--white);
-  border: 1.5px solid #c6dece;
+  border: 1.5px solid #b3ccf5;
   color: var(--green);
   font-weight: 600;
   font-size: 0.88rem;
@@ -492,8 +492,8 @@ h2.light {
 .trust-section {
   padding: 48px 0;
   background: var(--green-light);
-  border-top: 1px solid #d0e8da;
-  border-bottom: 1px solid #d0e8da;
+  border-top: 1px solid #c8d9f5;
+  border-bottom: 1px solid #c8d9f5;
 }
 
 .trust-strip {
@@ -535,7 +535,7 @@ h2.light {
 .trust-divider {
   width: 1px;
   height: 40px;
-  background: #c0d8ca;
+  background: #b8cee8;
   flex-shrink: 0;
 }
 
@@ -852,7 +852,63 @@ footer {
   }
 }
 
-/* ---------- REDUCED MOTION ---------- */
+/* ---------- ACCORDION SERVICE CARDS ---------- */
+.accordion-card {
+  cursor: pointer;
+}
+
+.service-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.service-header h3 {
+  flex: 1;
+  margin: 0;
+}
+
+.arrow {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--green-mid);
+  transition: transform 0.3s ease;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.service-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.45s ease, opacity 0.35s ease;
+  opacity: 0;
+}
+
+.accordion-card.active .service-content {
+  max-height: 200px;
+  opacity: 1;
+}
+
+.accordion-card.active .arrow {
+  transform: rotate(45deg);
+}
+
+/* When accordion is open, add top margin to the list */
+.service-content ul {
+  margin-top: 16px;
+}
+
+/* ---------- HERO FLOAT-IN ---------- */
+@keyframes floatIn {
+  from { opacity: 0; transform: translateY(-24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.hero-inner {
+  animation: floatIn 1s ease both;
+}
+
+
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     transition: none !important;
