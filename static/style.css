@@ -893,6 +893,16 @@ footer {
   transform: rotate(45deg);
 }
 
+.success-message {
+  background: #e8f5ee;
+  color: #155c37;
+  border: 1px solid #bfe5cf;
+  padding: 14px 16px;
+  border-radius: 10px;
+  margin-bottom: 18px;
+  font-weight: 600;
+}
+
 /* When accordion is open, add top margin to the list */
 .service-content ul {
   margin-top: 16px;

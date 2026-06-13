@@ -256,6 +256,16 @@
         <input type="hidden" name="redirect" value="https://www.foxcleaningherts.co.uk/?enquiry=success#contact">
         <input type="checkbox" name="botcheck" style="display:none;">
 
+        <div id="success-message" class="success-message" style="display:none;">
+        Thanks — your enquiry has been sent. We’ll be in touch shortly.
+        </div>
+
+        <script>
+        if (window.location.search.includes("enquiry=success")) {
+            document.getElementById("success-message").style.display = "block";
+        }
+        </script>
+
         <div class="form-row">
           <div class="form-group">
             <label for="name">Your name <span class="required">*</span></label>
