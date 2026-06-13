@@ -53,11 +53,11 @@ Message:
     msg.set_content(body)
 
     try:
-        with smtplib.SMTP_SSL("smtp.zoho.eu", 465, timeout=10) as smtp:
-            smtp.login(
-                os.environ.get("EMAIL_USER"),
-                os.environ.get("EMAIL_PASS")
-            )
+        with smtplib.SMTP("smtp.zoho.eu", 587, timeout=10) as smtp:
+            smtp.ehlo()
+            smtp.starttls()
+            smtp.ehlo()
+            smtp.login(os.environ.get("EMAIL_USER"), os.environ.get("EMAIL_PASS"))
             smtp.send_message(msg)
 
     except Exception as e:
