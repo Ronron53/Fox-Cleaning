@@ -53,7 +53,7 @@ Message:
     msg.set_content(body)
 
     try:
-        with smtplib.SMTP("smtp.zoho.eu", 587, timeout=10) as smtp:
+        with smtplib.SMTP("smtp.zoho.com", 587, timeout=10) as smtp:
             smtp.ehlo()
             smtp.starttls()
             smtp.ehlo()
