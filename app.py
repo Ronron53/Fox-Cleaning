@@ -48,13 +48,25 @@ Message:
 
     msg = EmailMessage()
     msg["Subject"] = "New Fox Cleaning enquiry"
-    msg["From"] = os.environ["EMAIL_USER"]
-    msg["To"] = os.environ["ENQUIRY_TO"]
+    msg["From"] = os.environ.get("EMAIL_USER")
+    msg["To"] = os.environ.get("ENQUIRY_TO")
     msg.set_content(body)
 
-    with smtplib.SMTP_SSL("smtp.zoho.eu", 465) as smtp:
-        smtp.login(os.environ["EMAIL_USER"], os.environ["EMAIL_PASS"])
-        smtp.send_message(msg)
+    try:
+        with smtplib.SMTP_SSL("smtp.zoho.eu", 465, timeout=10) as smtp:
+            smtp.login(
+                os.environ.get("EMAIL_USER"),
+                os.environ.get("EMAIL_PASS")
+            )
+            smtp.send_message(msg)
+
+    except Exception as e:
+        print("EMAIL SEND ERROR:", repr(e))
+        return """
+        <h1>Enquiry could not be sent</h1>
+        <p>Please call Fox Cleaning directly on 07986740303.</p>
+        <p>Or email hello@foxcleaningherts.co.uk.</p>
+        """, 500
 
     return redirect("/?enquiry=success#contact")
 
